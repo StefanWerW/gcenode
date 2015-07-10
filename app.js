@@ -21,7 +21,7 @@ io.sockets.on('connection',
 
     console.log("We have a new client: " + socket.id);
 
-    socket.emit('playerShipId', socket.id);
+    socket.emit('playerShipId', {shipid: socket.id});
 
     // When this user emits, client side: socket.emit('otherevent',some data);
     socket.on('shipInfo',
