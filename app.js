@@ -40,7 +40,7 @@ io.sockets.on('connection',
 
     socket.on('disconnect', function() {
       console.log("player disconected: " + socket.id);
-      socket.broadcast.emit('destroyShip', socket.id);
+      socket.broadcast.emit('destroyShip', {shipid: socket.id});
     });
   }
 );
