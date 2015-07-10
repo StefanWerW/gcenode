@@ -27,7 +27,7 @@ io.sockets.on('connection',
     socket.on('shipInfo',
       function(data) {
         // Data comes in as whatever was sent, including objects
-        console.log("Received: 'shipInfo' from " + socket.id);
+        //console.log("Received: 'shipInfo' from " + socket.id);
 
         // Send it to all other clients
         socket.broadcast.emit('shipInfo', data);
